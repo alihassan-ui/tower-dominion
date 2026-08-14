@@ -4,14 +4,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: kivy/buildozer:latest
+      image: kivy/buildozer:stable
     steps:
       - uses: actions/checkout@v4
       - name: Build APK
         run: |
-          yes | buildozer android debug --no-req-update
+          yes | buildozer android debug
       - name: Upload APK
-        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: tower-dominion-apk
