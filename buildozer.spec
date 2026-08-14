@@ -4,7 +4,7 @@ package.name = towerdominion
 package.domain = org.tower.game
 source.dir =.
 version = 0.1
-requirements = python3,kivy
+requirements = python3,pygame,android
 orientation = landscape
 
 [buildozer]
